@@ -52,7 +52,7 @@ public class PatientServiceImpl implements IPatientService {
                 List<JSONObject> entities = new ArrayList<JSONObject>();
                 for (JSONObject patient : patients) {
                     JSONObject entity = new JSONObject();
-                    entity.put("oldCategoried", "RA");
+                    entity.put("oldCategoried", new String[]{"RA"});
                     entity.put("SDS_version", "V1.0.0");
                     entity.put("Tab_version", "VB1.0.1");
                     entity.put("PID", patient.getString("_id"));
